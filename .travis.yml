@@ -163,10 +163,6 @@ before_install:
       export PATH=$PATH:~/castxml/bin/;
     fi
 
-  # Setup gccxml for the gccxml builds on linux
-  - if [[ "$XML_GENERATOR" == "gccxml" ]]; then sudo apt-get update -qq; fi
-  - if [[ "$XML_GENERATOR" == "gccxml" ]]; then sudo apt-get install -qq gccxml; fi
-
   # Patch the c++ version to test on the fly
   - if [[ $CPPSTD == "-std=c++03" ]]; then
       cd unittests && sed -i s%compiler=None,%compiler=None,\\n\ \ \ \ \ \ \ \ cflags=\"-std=c++03\",%g autoconfig.py && cd ..;
