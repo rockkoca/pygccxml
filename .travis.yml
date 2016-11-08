@@ -4,30 +4,63 @@ language:
 matrix:
   include:
     - os: linux
+      sudo: false
       python: 2.6
       env: XML_GENERATOR="gccxml"
+      addons:
+        apt:
+          packages:
+          - gccxml
     - os: linux
+      sudo: false
       python: 2.7
       env: XML_GENERATOR="gccxml"
+      addons:
+        apt:
+          packages:
+          - gccxml
     - os: linux
+      sudo: false
       python: 3.2
       env: XML_GENERATOR="gccxml"
+      addons:
+        apt:
+          packages:
+          - gccxml
     - os: linux
+      sudo: false
       python: 3.3
       env: XML_GENERATOR="gccxml"
+      addons:
+        apt:
+          packages:
+          - gccxml
     - os: linux
+      sudo: false
       python: 3.4
       env: XML_GENERATOR="gccxml"
+      addons:
+        apt:
+          packages:
+          - gccxml
     - os: linux
+      sudo: false
       python: 3.5
       env: XML_GENERATOR="gccxml"
+      addons:
+        apt:
+          packages:
+          - gccxml
     - os: linux
+      sudo: false
       python: 2.7
       env: XML_GENERATOR="castxml"
     - os: linux
+      sudo: false
       python: 3.5
       env: XML_GENERATOR="castxml"
     - os: linux
+      sudo: false
       python: 3.5
       env:
        - XML_GENERATOR="castxml"
@@ -41,12 +74,12 @@ matrix:
             - g++-5
     - os: linux
       dist: trusty
-      sudo: required
+      sudo: false
       python: 3.5
       env: XML_GENERATOR="castxml"
     - os: linux
       dist: trusty
-      sudo: required
+      sudo: false
       python: 3.5
       env:
          # gcc 4.8.2 with c++03
@@ -54,7 +87,7 @@ matrix:
          - CPPSTD="-std=c++03"
     - os: linux
       dist: trusty
-      sudo: required
+      sudo: false
       python: 3.5
       env:
          # gcc 4.8.2 with c++11
@@ -62,7 +95,7 @@ matrix:
          - CPPSTD="-std=c++11"
     - os: linux
       dist: trusty
-      sudo: required
+      sudo: false
       python: 3.5
       env:
        - XML_GENERATOR="castxml"
@@ -76,7 +109,7 @@ matrix:
             - g++-5
     - os: linux
       dist: trusty
-      sudo: required
+      sudo: false
       python: 3.5
       env:
        - XML_GENERATOR="castxml"
